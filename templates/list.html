@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Veículos Cadastrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Lista de Veículos Cadastrados</h1>
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Placa</th>
+        </tr>
+        {% for vehicle in vehicles %}
+        <tr>
+            <td>{{ vehicle[0] }}</td>
+            <td>{{ vehicle[1] }}</td>
+            <td>{{ vehicle[2] }}</td>
+            <td>{{ vehicle[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

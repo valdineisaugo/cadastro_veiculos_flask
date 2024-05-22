@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Cadastro de Veículos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Cadastro de Veículos</h1>
+    <nav>
+        <a href="{{ url_for('register') }}" class="button">Cadastrar Veículo</a>
+        <a href="{{ url_for('list_vehicles') }}" class="button">Listar Veículos</a>
+        <a href="{{ url_for('search_vehicle') }}" class="button">Pesquisar Veículo</a>
+    </nav>
+</body>
+</html>

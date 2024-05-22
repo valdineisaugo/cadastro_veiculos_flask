@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisar Veículo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Pesquisar Veículo</h1>
+    <form action="{{ url_for('search_vehicle') }}" method="post">
+        <label for="plate">Placa do Veículo:</label>
+        <input type="text" id="plate" name="plate" required><br>
+        <input type="submit" value="Pesquisar">
+    </form>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
