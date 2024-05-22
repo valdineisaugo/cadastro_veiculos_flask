@@ -22,7 +22,7 @@ def load_vehicle_by_plate(plate):
             return vehicle
     return None
 
-def update_vehicle(plate, updated_data):
+def update(plate, updated_data):
     vehicles = load_vehicles()
     for index, vehicle in enumerate(vehicles):
         if vehicle[3] == plate:
@@ -72,7 +72,7 @@ def update_vehicle(plate):
         model = request.form['model']
         year = request.form['year']
         updated_data = [make, model, year, plate]
-        update_vehicle(plate, updated_data)
+        update(plate, updated_data)
         return redirect(url_for('list_vehicles'))
     return render_template('update.html', vehicle=vehicle, plate=plate)
 
